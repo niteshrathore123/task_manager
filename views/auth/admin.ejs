@@ -1,0 +1,23 @@
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+<div>
+    <%- include("../partials/flash")%>
+</div>
+<section class="login-container">
+    <div class="form-container">
+        <form action="/admin" method="POST" class="validated-form" novalidate>
+            <h4 class="display-4 my-3" style="color: #1d3557;">Admin Login</h4>
+            <div class="mb-3">
+              <label for="username" class="form-label">User Name</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter the username" required>   
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter the Password" required>
+            </div>
+            <button  type="submit" class="login-btn btn btn-primary">Login</button>
+            
+        </form>
+    </div>
+    
+</section>

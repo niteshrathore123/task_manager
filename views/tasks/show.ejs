@@ -1,0 +1,34 @@
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+<%- include("../partials/flash")%>
+
+<% if(currentUser.role==="admin"){%>
+<div class="container mt-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Assign Task</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(let employee of employees){%>
+                <tr>
+                    <td><%= employee._id%></td>
+                    <td><%= employee.username%></td>
+                    <td><%= employee.email %></td>
+                    <td><a href="/tasks/<%=employee._id%>" style="color: lightsalmon; font-size: 24px;"><i class="fas fa-calendar-plus"></i></a></td>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+
+</div>
+<%}%>
+    
+
+
+
+

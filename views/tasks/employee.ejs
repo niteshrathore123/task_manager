@@ -1,0 +1,28 @@
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+<%- include("../partials/flash")%>
+
+
+<section>
+    <h6 class="display-6 text-center my-3" >All Tasks</h6>
+    <%for(let task of tasks){%>
+    <div class="container-card">
+        <div class="card-body">
+          <h5 class="card-title"><%= task.title%></h5>
+          <pre class="card-text"><%= task.desc%></pre>
+          <div style="padding: 10px;">
+            <embed src="/uploads/task/<%= task.file%>" width="300px" height="300px" type="application/pdf" />
+          </div>
+
+          <a href="#" class="btn btn-primary">Button</a>
+        </div>
+    </div>
+    <%}%>
+</section>
+
+
+
+
+
+
+<%- include("../partials/footer")%>

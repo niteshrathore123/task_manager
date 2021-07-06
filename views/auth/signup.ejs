@@ -1,0 +1,33 @@
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+<div>
+    <%- include("../partials/flash")%>
+</div>
+
+<div class="login-container">
+  <div class="form-container">
+    <form action="/register" method="POST" class="validated-form" novalidate>
+        <h4 class="display-4 my-3">Sign Up Here</h4>
+        <div class="mb-3">
+          <label for="username" class="form-label">User Name</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter the username" required >   
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter the email" required >
+        </div>
+        <div class="mb-3">
+            <p>Select User Role</p>
+            <input type="radio"  id="admin" name="role" value="admin" >
+            <label for="admin" class="form-label m-2">Admin</label>
+            <input type="radio"  id="employee" name="role" value="employee">
+            <label for="employee" class="form-label">Employee</label>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter the Password" required >
+        </div>
+        <button type="submit" class="signup-btn btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
